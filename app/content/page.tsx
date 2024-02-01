@@ -3,6 +3,10 @@
 import Image from "next/image";
 import React from "react";
 import Typed from "typed.js";
+import { HtmlIcon } from "../component/icons/html";
+import { CssIcon } from "../component/icons/css";
+import { JavaScriptIcon } from "../component/icons/javascript";
+import { NodeJsIcon } from "../component/icons/node";
 
 const Content = () => {
   const el = React.useRef(null);
@@ -41,6 +45,27 @@ const Content = () => {
             <div className="type-wrap">
               <span ref={el} />
             </div>
+          </div>
+        </div>
+      </div>
+      <div className="p-2 w-full">
+        <div>
+          <h1 className="text-4xl text-center sm:text-3xl font-bold p-4 pb-12">
+            Programming Languages
+          </h1>
+        </div>
+        <div className="flex flex-row gap-12 p-2 items-center justify-center">
+          <div className="card sm:w-[96px]">
+            <HtmlIcon />
+          </div>
+          <div className="card sm:w-[96px]">
+            <CssIcon />
+          </div>
+          <div className="card sm:w-[96px]">
+            <JavaScriptIcon />
+          </div>
+          <div className="card sm:w-[96px]">
+            <NodeJsIcon />
           </div>
         </div>
       </div>
