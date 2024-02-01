@@ -13,7 +13,7 @@ const Content = () => {
 
   React.useEffect(() => {
     const typed = new Typed(el.current, {
-      strings: ["My name is Riefqi and I am a developer."],
+      strings: ["My name is Riefqi and I am a self-taught developer."],
       typeSpeed: 50,
       loop: false,
     });
@@ -55,16 +55,16 @@ const Content = () => {
           </h1>
         </div>
         <div className="flex flex-row gap-12 p-2 items-center justify-center">
-          <div className="card sm:w-[96px]">
+          <div className="card sm:w-[96px] scale-100 hover:scale-105 ease-in duration-200">
             <HtmlIcon />
           </div>
-          <div className="card sm:w-[96px]">
+          <div className="card sm:w-[96px] scale-100 hover:scale-105 ease-in duration-200">
             <CssIcon />
           </div>
-          <div className="card sm:w-[96px]">
+          <div className="card sm:w-[96px] scale-100 hover:scale-105 ease-in duration-200">
             <JavaScriptIcon />
           </div>
-          <div className="card sm:w-[96px]">
+          <div className="card sm:w-[96px] scale-100 hover:scale-105 ease-in duration-200">
             <NodeJsIcon />
           </div>
         </div>
