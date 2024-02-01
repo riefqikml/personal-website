@@ -3,30 +3,28 @@ import Link from "next/dist/client/link";
 export const Navbar = () => {
   return (
     <>
-      <div className="navbar bg-base-100">
+      <div className="navbar bg-base-100 p-4 lg:px-8">
         <div className="flex-1">
-          <a className="btn btn-ghost text-xl">Riefqi</a>
+          <Link href="/" className="btn btn-ghost text-xl">
+            Riefqi
+          </Link>
         </div>
         <div className="flex-none">
           <ul className="menu menu-horizontal px-1">
             <li>
-              <Link href="/content/about" target="_blank">
-                About
-              </Link>
+              <Link href="/content/about">About</Link>
             </li>
-            <li>
+            <li className="">
               <details>
                 <summary>Others</summary>
-                <ul className="p-2 bg-base-100 rounded-t-none">
+                <ul className="p-2 bg-base-200 rounded-xl shadow-xl z-10">
                   <li>
                     <Link href="https://github.com/feir-afk" target="_blank">
                       Github
                     </Link>
                   </li>
                   <li>
-                    <Link href="/content/portfolio" target="_blank">
-                      Portfolio
-                    </Link>
+                    <Link href="/content/portfolio">Portfolio</Link>
                   </li>
                 </ul>
               </details>
