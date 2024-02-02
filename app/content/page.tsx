@@ -7,6 +7,8 @@ import { HtmlIcon } from "../component/icons/html";
 import { CssIcon } from "../component/icons/css";
 import { JavaScriptIcon } from "../component/icons/javascript";
 import { NodeJsIcon } from "../component/icons/node";
+import { TypeScriptIcon } from "../component/icons/typescript";
+import { ReactIcon } from "../component/icons/react";
 
 const Content = () => {
   const el = React.useRef(null);
@@ -54,7 +56,7 @@ const Content = () => {
             Programming Languages
           </h1>
         </div>
-        <div className="flex flex-row gap-12 p-2 items-center justify-center">
+        <div className="flex flex-col md:flex-row gap-12 p-2 items-center justify-center">
           <div className="card sm:w-[96px] scale-100 hover:scale-105 ease-in duration-200">
             <HtmlIcon />
           </div>
@@ -66,6 +68,12 @@ const Content = () => {
           </div>
           <div className="card sm:w-[96px] scale-100 hover:scale-105 ease-in duration-200">
             <NodeJsIcon />
+          </div>
+          <div className="card sm:w-[96px] scale-100 hover:scale-105 ease-in duration-200">
+            <TypeScriptIcon />
+          </div>
+          <div className="card sm:w-[96px] scale-100 hover:scale-105 ease-in duration-200">
+            <ReactIcon />
           </div>
         </div>
       </div>
