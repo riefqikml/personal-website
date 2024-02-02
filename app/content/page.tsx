@@ -9,6 +9,7 @@ import { JavaScriptIcon } from "../component/icons/javascript";
 import { NodeJsIcon } from "../component/icons/node";
 import { TypeScriptIcon } from "../component/icons/typescript";
 import { ReactIcon } from "../component/icons/react";
+import { MongoDbIcon } from "../component/icons/mongodb";
 
 const Content = () => {
   const el = React.useRef(null);
@@ -74,6 +75,9 @@ const Content = () => {
           </div>
           <div className="card sm:w-[96px] scale-100 hover:scale-105 ease-in duration-200">
             <ReactIcon />
+          </div>
+          <div className="card sm:w-[96px] scale-100 hover:scale-105 ease-in duration-200">
+            <MongoDbIcon />
           </div>
         </div>
       </div>
