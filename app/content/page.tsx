@@ -11,6 +11,18 @@ import { TypeScriptIcon } from "../component/icons/typescript";
 import { ReactIcon } from "../component/icons/react";
 import { MongoDbIcon } from "../component/icons/mongodb";
 import { ExpressJsIcon } from "../component/icons/expressjs";
+import { Navbar } from "../component/navbar";
+
+const icons = [
+  { component: <HtmlIcon />, key: 'html' },
+  { component: <CssIcon />, key: 'css' },
+  { component: <JavaScriptIcon />, key: 'javascript' },
+  { component: <TypeScriptIcon />, key: 'typescript' },
+  { component: <MongoDbIcon />, key: 'mongodb' },
+  { component: <ExpressJsIcon />, key: 'expressjs' },
+  { component: <ReactIcon />, key: 'react' },
+  { component: <NodeJsIcon />, key: 'nodejs' }
+];
 
 const Content = () => {
   const el = React.useRef(null);
@@ -23,13 +35,13 @@ const Content = () => {
     });
 
     return () => {
-      // Destroy Typed instance during cleanup to stop animation
       typed.destroy();
     };
   }, []);
 
   return (
     <>
+      <Navbar />
       <div className="flex p-12 justify-center">
         <div className="card w-96 h-[252px] bg-base-200 border-none shadow-xl scale-100 hover:scale-105 ease-in duration-200">
           <div className="flex justify-center avatar py-4">
@@ -59,30 +71,11 @@ const Content = () => {
           </h1>
         </div>
         <div className="flex flex-col md:flex-row gap-12 p-2 items-center justify-center">
-          <div className="card sm:w-[96px] scale-100 hover:scale-105 ease-in duration-200">
-            <HtmlIcon />
-          </div>
-          <div className="card sm:w-[96px] scale-100 hover:scale-105 ease-in duration-200">
-            <CssIcon />
-          </div>
-          <div className="card sm:w-[96px] scale-100 hover:scale-105 ease-in duration-200">
-            <JavaScriptIcon />
-          </div>
-          <div className="card sm:w-[96px] scale-100 hover:scale-105 ease-in duration-200">
-            <TypeScriptIcon />
-          </div>
-          <div className="card sm:w-[96px] scale-100 hover:scale-105 ease-in duration-200">
-            <MongoDbIcon />
-          </div>
-          <div className="card sm:w-[96px] scale-100 hover:scale-105 ease-in duration-200">
-            <ExpressJsIcon />
-          </div>
-          <div className="card sm:w-[96px] scale-100 hover:scale-105 ease-in duration-200">
-            <ReactIcon />
-          </div>
-          <div className="card sm:w-[96px] scale-100 hover:scale-105 ease-in duration-200">
-            <NodeJsIcon />
-          </div>
+          {icons.map(({ component, key }) => (
+            <div key={key} className="card sm:w-[96px] scale-100 hover:scale-105 ease-in duration-200">
+              {component}
+            </div>
+          ))}
         </div>
       </div>
     </>
