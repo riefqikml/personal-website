@@ -11,7 +11,6 @@ import { TypeScriptIcon } from "../component/icons/typescript";
 import { ReactIcon } from "../component/icons/react";
 import { MongoDbIcon } from "../component/icons/mongodb";
 import { ExpressJsIcon } from "../component/icons/expressjs";
-import { Navbar } from "../component/navbar";
 
 const icons = [
   { component: <HtmlIcon />, key: 'html' },
@@ -41,7 +40,6 @@ const Content = () => {
 
   return (
     <>
-      <Navbar />
       <div className="flex p-12 justify-center">
         <div className="card w-96 h-[252px] bg-base-200 border-none shadow-xl scale-100 hover:scale-105 ease-in duration-200">
           <div className="flex justify-center avatar py-4">
