@@ -41,7 +41,7 @@ const Content = () => {
   return (
     <>
       <div className="flex p-12 justify-center">
-        <div className="card w-96 h-[252px] bg-base-200 border-none shadow-xl scale-100 hover:scale-105 ease-in duration-200">
+        <div className="rounded-badge w-96 h-[252px] bg-base-200 border-none shadow-xl scale-100 hover:scale-105 ease-in duration-200">
           <div className="flex justify-center avatar py-4">
             <div className="w-24 rounded-full">
               <Image
@@ -54,7 +54,7 @@ const Content = () => {
               />
             </div>
           </div>
-          <div className="card-body text-center pt-0">
+          <div className="card-body text-center py-0 px-4">
             <h2 className="card-title justify-center">Hello there!</h2>
             <div className="type-wrap">
               <span ref={el} />
@@ -64,11 +64,11 @@ const Content = () => {
       </div>
       <div className="p-2 w-full">
         <div>
-          <h1 className="text-4xl text-center sm:text-3xl font-bold p-4 pb-12">
+          <h1 className="text-xl text-center sm:text-3xl font-bold p-4 pb-12">
             Programming Languages
           </h1>
         </div>
-        <div className="flex flex-col md:flex-row gap-12 p-2 items-center justify-center">
+        <div className="flex flex-wrap md:flex-row gap-12 p-4 items-center justify-center">
           {icons.map(({ component, key }) => (
             <div key={key} className="card sm:w-[96px] scale-100 hover:scale-105 ease-in duration-200">
               {component}
