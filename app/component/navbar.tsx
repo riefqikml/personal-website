@@ -1,6 +1,36 @@
-import Link from "next/dist/client/link";
+"use client"
 
-export const Navbar = () => {
+import Link from "next/link";
+import { useState, useEffect, useRef } from "react";
+
+export const Navbar: React.FC = () => {
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target as Node)
+      ) {
+        setIsDropdownOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
+  const toggleDropdown = () => {
+    setIsDropdownOpen(!isDropdownOpen);
+  };
+
+  const closeDropdown = () => {
+    setIsDropdownOpen(false);
+  };
+
   return (
     <div className="navbar bg-base-100 p-4 lg:px-8">
       <div className="flex-1">
@@ -14,16 +44,33 @@ export const Navbar = () => {
             About
           </div>
         </Link>
-        <div className="dropdown dropdown-hover">
-          <p tabIndex={0} role="button" className="btn m-2 rounded-box">Others</p>
-          <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow-xl bg-base-200 rounded-box">
+        <div className="dropdown dropdown-hover" ref={dropdownRef}>
+          <p
+            tabIndex={0}
+            role="button"
+            className="btn m-2 rounded-box"
+            onClick={toggleDropdown}
+          >
+            Others
+          </p>
+          <ul
+            tabIndex={0}
+            className={`dropdown-content z-[1] menu p-2 shadow-xl bg-base-200 rounded-box ${isDropdownOpen ? "block" : "hidden"
+              }`}
+          >
             <li>
-              <Link href="https://github.com/feir-afk" target="_blank">
+              <Link
+                href="https://github.com/feir-afk"
+                target="_blank"
+                onClick={closeDropdown}
+              >
                 Github
               </Link>
             </li>
             <li>
-              <Link href="/content/projects">Projects</Link>
+              <Link href="/content/projects" onClick={closeDropdown}>
+                Projects
+              </Link>
             </li>
           </ul>
         </div>
