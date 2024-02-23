@@ -1,5 +1,6 @@
-import { projectList } from "@/project";
+import { projectList } from "@/projects-data";
 import Link from "next/link";
+import { FaGithub } from "react-icons/fa";
 import { GoLink } from "react-icons/go";
 
 export const ProjectPage = () => {
@@ -13,8 +14,19 @@ export const ProjectPage = () => {
 							<p className="h-[60px]">{item.description}</p>
 							<div className="card-actions justify-end">
 								<Link href={item.link} target="_blank">
-									<button className="btn btn-ghost rounded-box ">
+									<button
+										className="btn btn-ghost rounded-box tooltip"
+										data-tip="Project Website"
+									>
 										<GoLink />
+									</button>
+								</Link>
+								<Link href={item.github} target="_blank">
+									<button
+										className="btn btn-ghost rounded-box tooltip"
+										data-tip="Source Code"
+									>
+										<FaGithub />
 									</button>
 								</Link>
 							</div>

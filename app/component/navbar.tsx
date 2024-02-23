@@ -39,9 +39,9 @@ export const Navbar: React.FC = () => {
 				</Link>
 			</div>
 			<div className="flex-row">
-				<Link href="/content/about" className="btn btn-ghost rounded-box">
+				<Link href="/content/projects" className="btn btn-ghost rounded-box">
 					<div tabIndex={0} role="button">
-						About
+						Projects
 					</div>
 				</Link>
 				<div className="dropdown dropdown-hover" ref={dropdownRef}>
@@ -69,8 +69,8 @@ export const Navbar: React.FC = () => {
 							</Link>
 						</li>
 						<li>
-							<Link href="/content/projects" onClick={closeDropdown}>
-								Projects
+							<Link href="/content/about" onClick={closeDropdown}>
+								About
 							</Link>
 						</li>
 					</ul>
