@@ -7,7 +7,7 @@ const Projects = () => {
 	return (
 		<div>
 			<h1 className="text-center pb-8 pt-4 text-3xl font-bold">Projects</h1>
-			<div className="flex flex-wrap px-4 pt-4 pb-8 gap-14 justify-center items-center">
+			<div className="flex flex-wrap gap-14 justify-center items-center p-8 pt-4">
 				{projectList.map((item: any) => (
 					<>
 						<div className="rounded-badge w-96 bg-base-200 shadow-xl scale-100 hover:scale-105 ease-in duration-200">
