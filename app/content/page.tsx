@@ -11,6 +11,7 @@ import { TypeScriptIcon } from "../component/icons/typescript";
 import { ReactIcon } from "../component/icons/react";
 import { MongoDbIcon } from "../component/icons/mongodb";
 import { ExpressJsIcon } from "../component/icons/expressjs";
+import { NextJSIcon } from "../component/icons/nextjs";
 
 const icons = [
 	{ component: <HtmlIcon />, key: "html" },
@@ -21,6 +22,7 @@ const icons = [
 	{ component: <ExpressJsIcon />, key: "expressjs" },
 	{ component: <ReactIcon />, key: "react" },
 	{ component: <NodeJsIcon />, key: "nodejs" },
+	{ component: <NextJSIcon />, key: "nextjs" },
 ];
 
 const Content = () => {
@@ -74,7 +76,7 @@ const Content = () => {
 					{icons.map(({ component, key }) => (
 						<div
 							key={key}
-							className="card sm:w-[96px] scale-100 hover:scale-105 ease-in duration-200"
+							className="card sm:w-[96px] scale-100 hover:scale-110 ease-in duration-200"
 						>
 							{component}
 						</div>
