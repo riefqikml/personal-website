@@ -1,7 +1,5 @@
-export const MongoDbIcon = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    className="h-[48px] w-[48px] sm:h-[96px] sm:w-[96px]"
     viewBox="0 0 128 128"
     id="mongodb"
   >
@@ -12,4 +10,3 @@ export const MongoDbIcon = () => (
       clipRule="evenodd"
     ></path>
   </svg>
-);
