@@ -31,7 +31,7 @@ export const Carousel = () => {
             <Image
               src={logo.src}
               alt={logo.alt}
-              className="w-[75px] md:w-[100px]"
+              className="w-[75px] md:w-[100px] transition hover:scale-110"
             />
           </li>
         ))}
@@ -45,7 +45,7 @@ export const Carousel = () => {
             <Image
               src={logo.src}
               alt={logo.alt}
-              className="w-[75px] md:w-[100px]"
+              className="w-[75px] md:w-[100px] transition hover:scale-110"
             />
           </li>
         ))}
