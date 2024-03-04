@@ -17,8 +17,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${inter.className} h-screen`} data-theme="acid">
+    <html lang="en" data-theme="acid">
+      <body className={inter.className}>
         <Navbar />
         {children}
         <Analytics />
